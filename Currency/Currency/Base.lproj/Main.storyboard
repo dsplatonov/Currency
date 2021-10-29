@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Курс доллара от ЦБ РФ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-4B-rWh">
+                                <rect key="frame" x="78.5" y="64" width="257.5" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SO0-d5-Be2">
+                                <rect key="frame" x="20" y="828" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="O84-Ka-FQk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWN-On-f7a">
+                                <rect key="frame" x="281.5" y="831" width="112.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Подтвердить"/>
+                                <connections>
+                                    <action selector="confirmButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zVc-MK-VDz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Уведомить, когда будет выше установленной" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRJ-hT-wEk">
+                                <rect key="frame" x="25.5" y="777" width="363" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="K7e-jX-ozc">
+                                <rect key="frame" x="20" y="113" width="374" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ety-nE-AWO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="I67-Fk-4cf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fWN-On-f7a" secondAttribute="bottom" id="2zy-US-K7j"/>
+                            <constraint firstItem="SO0-d5-Be2" firstAttribute="top" secondItem="KRJ-hT-wEk" secondAttribute="bottom" constant="30" id="47F-fg-Idk"/>
+                            <constraint firstItem="2ZH-4B-rWh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7K5-X7-blj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K7e-jX-ozc" secondAttribute="trailing" constant="20" id="Ks5-yk-GOk"/>
+                            <constraint firstItem="SO0-d5-Be2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NCm-IF-uBZ"/>
+                            <constraint firstItem="SO0-d5-Be2" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RP3-VP-o4d"/>
+                            <constraint firstItem="2ZH-4B-rWh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="aVI-Ny-mxT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fWN-On-f7a" secondAttribute="trailing" constant="20" id="eI2-vv-5AF"/>
+                            <constraint firstItem="K7e-jX-ozc" firstAttribute="top" secondItem="2ZH-4B-rWh" secondAttribute="bottom" constant="20" id="hwZ-6F-6g9"/>
+                            <constraint firstItem="K7e-jX-ozc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tVx-ss-OYb"/>
+                            <constraint firstItem="KRJ-hT-wEk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="weE-c6-OIm"/>
+                            <constraint firstItem="KRJ-hT-wEk" firstAttribute="top" secondItem="K7e-jX-ozc" secondAttribute="bottom" constant="40" id="ybn-af-k0L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="notificationTextField" destination="SO0-d5-Be2" id="D22-cC-sln"/>
+                        <outlet property="tableWithResults" destination="K7e-jX-ozc" id="gMT-cM-u1R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

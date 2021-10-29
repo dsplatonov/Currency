@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SWXMLHash",
+        "repositoryURL": "https://github.com/drmohundro/SWXMLHash.git",
+        "state": {
+          "branch": "main",
+          "revision": "438558589d7d625a0704e15ca61aa8dec8f107b6",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
